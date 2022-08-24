@@ -1,34 +1,41 @@
+// Factoriales sin recursividad
 #include <stdio.h>
-// la cantidad de paso que debe dar este algoritmo est dado por O(2n-1)
 /*
-factTail(n, a) {
+factRecursion(n) {
 	if (n lt 0)
 		return 0
 	else if (n equal 0)
 		return 1
 	else if (n equal 1)
-		return a
+		return 1
 	else
-		return factTail(n - 1, n * a)
+		return n * fact(n - 1)
 }
 */
+// el numero de pasos del algoritmo esta dado por O(n)
 
-factTail(int n,int a) {
-	if (n < 0)
-		return 0;
-	else if (n == 0)
-		return 1;
-	else if (n == 1)
-		return a;
-	else
-		return factTail(n - 1, n * a);
-}
-
-int main (){
-  unsigned int n=3;
-  int a=1;
-  factTail(n,a);
-  printf("%d", n);
+int f(int n){
 	
+	int m;
+	if (n==0 || n==1){
+		printf("El factorial es 1");
+	}
+	else{
+		m=n;
+	do {
+	 m=m*(n-1);
+	 n=n-1;
+		printf ("\nUno de los numeros para llegar al factorial es: %d", m);
+	}while (n!=1);
+		printf ("\n El factorial es: %d", m);
+	}
 }
 
+
+
+int main(){
+	
+	unsigned int n=10;
+	
+	f(n);
+}
