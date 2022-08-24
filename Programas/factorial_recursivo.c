@@ -1,5 +1,5 @@
 // Factoriales sin recursividad
-// la complejidad de este aloritmo es de n siendo n dado por el numero al cual deseas calcular el factorial ;)
+// la complejidad de este aloritmo es de 2n-1 siendo n dado por el numero al cual deseas calcular el factorial ;)
 #include <stdio.h>
 /*
 factRecursion(n) {
