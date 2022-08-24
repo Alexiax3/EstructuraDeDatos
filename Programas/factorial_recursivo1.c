@@ -1,17 +1,5 @@
 // Factoriales sin recursividad
 #include <stdio.h>
-/*
-factRecursion(n) {
-	if (n lt 0)
-		return 0
-	else if (n equal 0)
-		return 1
-	else if (n equal 1)
-		return 1
-	else
-		return n * fact(n - 1)
-}
-*/
 // el numero de pasos del algoritmo esta dado por O(n)
 
 int f(int n){
