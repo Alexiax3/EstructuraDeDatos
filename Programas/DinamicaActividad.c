@@ -13,7 +13,6 @@ int main()
         
         for (i=9; i>=0; i--){
             printf("\n %d", pv[i]);
-        }
         
     free (pv);
 
