@@ -15,7 +15,7 @@ static void print_Dlist (const DList *list) {
 
     while (1) {
         data = dlist_data(node);
-        fprintf(stdout, "Dlist.node[%03d]=%03d,%p -> %p -> %p \n", i, *data, node->next, node, node->next);
+        fprintf(stdout, "Dlist.node[%03d]=%03d,%p -> %p -> %p \n", i, *data, node->prev, node, node->next);
 
         i++;
 
