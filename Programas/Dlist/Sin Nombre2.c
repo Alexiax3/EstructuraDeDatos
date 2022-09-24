@@ -50,26 +50,23 @@ int main (int argc, char **argv) {
 			return 5;
 		}
          
-        *data = i;
-         
-		dlist_ins_next(&list, NULL, data); 
-		   
-        m=dlist_size(&list);
-        printf("\n en main es %d \n",m);	
+        *data = 10-i;//dato a guardar
+		
+		if(dlist_ins_prev (&list, list.tail, data )!=0)
+			return 0;	
+		
+		list.tail->next=list.head;
+			  
+        //m=dlist_size(&list);
+        //printf("\n en main es %d \n",m);	
             
     }
-    
+    list.tail->next=NULL;
     
     print_Dlist(& list);
+    
 
-    node = dlist_head(&list);
-     
-     
-        for (i = 0; i < 7; ++i)
-        node = dlist_next(node);
-
-    data = dlist_data(node);
-
+    
 }
 
 
