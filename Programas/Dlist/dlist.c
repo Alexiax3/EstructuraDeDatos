@@ -40,11 +40,18 @@ int dlist_ins_next (DList *list, DListNode *node, const void *data ) {
     DListNode    *new_node;
 
     // Do not allow a NULL node unless the list is empty
-    if (node == NULL && dlist_size(list) != 0)
-        return -1;
+    if (node == NULL && dlist_size(list) != 0){
+    	printf("esta mal la cabeza");
+    	return -1;
+	}
+        
 
-    if ((new_node = (DListNode *)malloc(sizeof(DListNode))) == NULL)
-        return -1;
+    if ((new_node = (DListNode *)malloc(sizeof(DListNode))) == NULL){
+    	printf("no se asigno memoria bien ");
+    	return -1;
+    	
+	}
+        
 
     new_node->data = (void *)data;
 
