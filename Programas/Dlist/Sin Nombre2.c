@@ -31,8 +31,7 @@ static void print_Dlist (const DList *list) {
 
 int main (int argc, char **argv) {
     DList list;
-    DListNode *node;
-	int m;
+    DListNode *node, *a;
     int *data, i;
 
     // Initialize the linked list
