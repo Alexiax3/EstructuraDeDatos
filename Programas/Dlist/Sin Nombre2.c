@@ -8,7 +8,7 @@ static void print_Dlist (const DList *list) {
     DListNode *node;
     int *data, i;
 
-    fprintf(stdout, "List size is %d\n", dlist_size(list));
+    fprintf(stdout, "\n\n\tList size is %d\n", dlist_size(list));
 
     i = 0;
     node = dlist_head(list);
@@ -63,6 +63,10 @@ int main (int argc, char **argv) {
     
     print_Dlist(& list);
     
+    //cambio de cabeza por 9
+    list.head->data=9;
+    
+    print_Dlist(& list);
 
     
 }
