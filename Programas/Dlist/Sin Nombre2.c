@@ -38,9 +38,8 @@ int main (int argc, char **argv) {
     dlist_init(&list, free);
     
     // Fill the linked list
-    node = dlist_head(&list);
 
-    for (i = 10; i > 0; i--) {
+    for (i = 1; i<11  ; i++ ){
     	//a=0;
 
         if ((data = (int *)malloc(sizeof(int))) == NULL){
@@ -48,27 +47,73 @@ int main (int argc, char **argv) {
 			return 5;
 		}
          
-        *data = 10-i;//dato a guardar
+        *data =12- i;//dato a guardar
+		if(dlist_ins_next (&list,list.head,data )!=0)
+			return 0;
 		
-		if(dlist_ins_prev (&list, list.tail, data )!=0)
-			return 0;	
-		
-		list.tail->next=list.head;
-			  
-        //m=dlist_size(&list);
-        //printf("\n en main es %d \n",m);	
-            
+		//node->prev=list.tail->prev;	    
     }
-    list.tail->next=NULL;
-    
-    print_Dlist(& list);
+    node= list.head;
+    if (dlist_remove(&list, node, (void**)&data) != 0)
+        return 1;
+    node= list.head;
+    *data=1;
+    if (dlist_ins_prev(&list, list.head,data) != 0)
+        return 1;
+	print_Dlist(& list);
+	
+	
+	//for(1=0;i< (list.size/2);i++){
+	printf("\n\n\n\t\t\tREMOVER CABEZA");
+		node=list.head;
+    	if (dlist_remove(&list, node, (void**)&data) != 0)
+        return 1;
+	//}
+	print_Dlist(& list);
+
+	
+    	printf("\n\n\n\t\t\tREMOVER COLA");
+	
+	   	if (dlist_remove(&list, list.tail, (void**)&data) != 0)
+        return 1;
+	//}
+	print_Dlist(& list);
+
+    printf("\n\n\n\t\t\tREMOVER 5-7");
+	node=list.head;
+		for(i=0;i<8;i++){
+			
+			if(i<7 && i>3){
+				if (dlist_remove(&list,node , (void**)&data) != 0)
+        			return 1;
+			}
+		node=node->next;
+		}
+	   	
+	//}
+	print_Dlist(& list);
     
     //cambio de cabeza por 9
-    list.head->data=9;
     
-    print_Dlist(& list);
-
+    /*
+    //INSERT ACOUNT
+         	*data = 422068044;
+         	node=dlist_head(&list);
+         	for (i = 0; i < (list.size/2); ++i)
+        	node = dlist_next(node);
+        	
+        	
+		if(dlist_ins_prev (&list,node , data )!=0)
+			return 0;
+			
+			    
+    print_Dlist(&list);
     
+    // Destroying the list
+    fprintf(stdout, "\nDestroying the list\n");
+    dlist_destroy(&list);
+    return 0;
+    */
 }
 
 
