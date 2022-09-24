@@ -39,8 +39,7 @@ int main (int argc, char **argv) {
     
     // Fill the linked list
     node = dlist_head(&list);
-    
-    
+
     for (i = 10; i > 0; i--) {
     	//a=0;
 
