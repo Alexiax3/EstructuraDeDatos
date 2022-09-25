@@ -128,28 +128,7 @@ int main (int argc, char **argv) {
 	}
 	print_Dlist(& list);
 	
-	
-    //cambio de cabeza por 9
-    
-    /*
-    //INSERT ACOUNT
-         	*data = 422068044;
-         	node=dlist_head(&list);
-         	for (i = 0; i < (list.size/2); ++i)
-        	node = dlist_next(node);
-        	
-        	
-		if(dlist_ins_prev (&list,node , data )!=0)
-			return 0;
-			
-			    
-    print_Dlist(&list);
-    
-    // Destroying the list
-    fprintf(stdout, "\nDestroying the list\n");
-    dlist_destroy(&list);
-    return 0;
-    */
+
 }
 
 
