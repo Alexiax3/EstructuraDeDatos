@@ -128,6 +128,8 @@ int main (int argc, char **argv) {
 	}
 	print_Dlist(& list);
 	
+	list_destroy(&list);
+	
 
 }
 

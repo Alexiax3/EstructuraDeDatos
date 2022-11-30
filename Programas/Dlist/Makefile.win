@@ -1,15 +1,15 @@
-# Project: Dlist3
+# Project: Dlist
 # Makefile created by Dev-C++ 5.11
 
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = Dlist3.o ../../../1301-2022-ED/code/source/dlist.o
-LINKOBJ  = Dlist3.o ../../../1301-2022-ED/code/source/dlist.o
-LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -L"C:/Users/user/Documents/1301-2022-ED/code/source"
-INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Users/user/Documents/1301-2022-ED/code/include"
-CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++" -I"C:/Users/user/Documents/1301-2022-ED/code/include"
-BIN      = Dlist3.exe
+OBJ      = ../../1301-2022-ED/code/source/dlist.o Dlist/Dlistmain.o
+LINKOBJ  = ../../1301-2022-ED/code/source/dlist.o Dlist/Dlistmain.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -L"C:/Users/user/Documents/1301-2022-ED/code/include"
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Users/user/Documents/1301-2022-ED/code/source"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++" -I"C:/Users/user/Documents/1301-2022-ED/code/source"
+BIN      = Dlist.exe
 CXXFLAGS = $(CXXINCS) 
 CFLAGS   = $(INCS) 
 RM       = rm.exe -f
@@ -24,8 +24,8 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
 
-Dlist3.o: Dlist3.c
-	$(CC) -c Dlist3.c -o Dlist3.o $(CFLAGS)
+../../1301-2022-ED/code/source/dlist.o: ../../1301-2022-ED/code/source/dlist.c
+	$(CC) -c ../../1301-2022-ED/code/source/dlist.c -o ../../1301-2022-ED/code/source/dlist.o $(CFLAGS)
 
-../../../1301-2022-ED/code/source/dlist.o: ../../../1301-2022-ED/code/source/dlist.c
-	$(CC) -c ../../../1301-2022-ED/code/source/dlist.c -o ../../../1301-2022-ED/code/source/dlist.o $(CFLAGS)
+Dlist/Dlistmain.o: Dlist/Dlistmain.c
+	$(CC) -c Dlist/Dlistmain.c -o Dlist/Dlistmain.o $(CFLAGS)
